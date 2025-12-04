@@ -71,28 +71,22 @@ export default function Navbar() {
                       </Link>
                       {/* Dropdown Menu */}
                       <div className="absolute top-full left-0 mt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                        <div className="bg-white/80 backdrop-blur-xl rounded-xl shadow-[0_8px_24px_rgba(0,0,0,0.15)] border border-white/40 py-2">
-                          <div className="px-3 py-2 text-sm text-gray-700 hover:bg-[#0055AD15] rounded-lg mx-2 transition-colors duration-200 cursor-pointer">
+                        <div className="bg-white rounded-xl shadow-[0_8px_24px_rgba(0,0,0,0.15)] border border-white/40 py-2">
+                          <Link href="/products/engine-oil" className="block px-3 py-2 text-sm text-gray-700 hover:bg-[#0055AD15] rounded-lg mx-2 transition-colors duration-200">
                             Engine Oil
-                          </div>
-                          <div className="px-3 py-2 text-sm text-gray-700 hover:bg-[#0055AD15] rounded-lg mx-2 transition-colors duration-200 cursor-pointer">
+                          </Link>
+                          <Link href="/products/gear-oil" className="block px-3 py-2 text-sm text-gray-700 hover:bg-[#0055AD15] rounded-lg mx-2 transition-colors duration-200">
                             Gear Oil
-                          </div>
-                          <div className="px-3 py-2 text-sm text-gray-700 hover:bg-[#0055AD15] rounded-lg mx-2 transition-colors duration-200 cursor-pointer">
-                            Coolant
-                          </div>
-                          <div className="px-3 py-2 text-sm text-gray-700 hover:bg-[#0055AD15] rounded-lg mx-2 transition-colors duration-200 cursor-pointer">
+                          </Link>
+                          <Link href="/products/hydraulic-oil" className="block px-3 py-2 text-sm text-gray-700 hover:bg-[#0055AD15] rounded-lg mx-2 transition-colors duration-200">
                             Hydraulic Oil
-                          </div>
-                          <div className="px-3 py-2 text-sm text-gray-700 hover:bg-[#0055AD15] rounded-lg mx-2 transition-colors duration-200 cursor-pointer">
+                          </Link>
+                          <Link href="/products/grease" className="block px-3 py-2 text-sm text-gray-700 hover:bg-[#0055AD15] rounded-lg mx-2 transition-colors duration-200">
                             Grease
-                          </div>
-                          <div className="px-3 py-2 text-sm text-gray-700 hover:bg-[#0055AD15] rounded-lg mx-2 transition-colors duration-200 cursor-pointer">
-                            Brake Fluid
-                          </div>
-                          <div className="px-3 py-2 text-sm text-gray-700 hover:bg-[#0055AD15] rounded-lg mx-2 transition-colors duration-200 cursor-pointer">
-                            Industrial Lubricants
-                          </div>
+                          </Link>
+                          <Link href="/products/other-items" className="block px-3 py-2 text-sm text-gray-700 hover:bg-[#0055AD15] rounded-lg mx-2 transition-colors duration-200">
+                            Other Items
+                          </Link>
                         </div>
                       </div>
                     </div>
