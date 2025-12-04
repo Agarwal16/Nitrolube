@@ -1,26 +1,27 @@
 export default function About() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-blue-50">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-white via-blue-50 to-primary-500 py-20">
+    <div className="min-h-screen bg-gray-50">
+      {/* Header Section */}
+      <section className="bg-gradient-to-b from-[#0055AD] to-white pt-32 pb-16 rounded-b-3xl">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-            About NitroLube
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
+            About Us
           </h1>
-          <p className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto">
-            Your trusted partner in premium lubricants
+          <p className="text-xl md:text-2xl text-white">
+            The Story Behind NitroLube
           </p>
         </div>
       </section>
 
-      {/* Content Section */}
-      <section className="py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-2xl shadow-xl p-10 md:p-16 border border-gray-100">
-            <div className="space-y-8">
-              <div>
-                <h2 className="text-4xl font-bold mb-6 text-gray-900">
-                  Our Story
+      {/* Main Content Container */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 mb-20">
+        <div className="bg-gray-100 rounded-3xl p-8 md:p-12 shadow-xl">
+          
+          {/* Who We Are Section */}
+          <section className="bg-white rounded-2xl p-8 md:p-12 mb-8 shadow-md">
+            <div>
+                <h2 className="text-4xl font-bold text-[#0055AD] mb-6">
+                  Who We Are
                 </h2>
                 <p className="text-lg text-gray-700 leading-relaxed mb-4">
                   NitroLube has been a leading provider of high-quality lubricants
@@ -36,67 +37,116 @@ export default function About() {
                   machinery. Whether you need engine oils, industrial lubricants, or
                   specialty products, NitroLube has you covered.
                 </p>
-              </div>
+            </div>
+          </section>
 
-              <div className="pt-8 border-t border-gray-200">
-                <h2 className="text-4xl font-bold mb-6 text-gray-900">
-                  Our Mission
-                </h2>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  Our mission is to provide superior quality lubricants that help
-                  our customers achieve optimal performance from their equipment. We
-                  strive to maintain the highest standards in product quality,
-                  customer service, and industry innovation.
+          {/* Mission Section */}
+          <section className="bg-white rounded-2xl p-8 md:p-12 mb-8 shadow-md">
+            <h2 className="text-4xl font-bold text-[#0055AD] mb-6">
+              Our Mission
+            </h2>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Our mission is to provide superior quality lubricants that help
+              our customers achieve optimal performance from their equipment. We
+              strive to maintain the highest standards in product quality,
+              customer service, and industry innovation.
+            </p>
+          </section>
+
+          {/* Why Choose NitroLube Section */}
+          <section className="mb-8">
+            <h2 className="text-4xl font-bold text-[#0055AD] mb-8 text-center">
+              Why Choose NitroLube
+            </h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              {/* Advanced Protection Card */}
+              <div className="bg-white rounded-xl p-6 shadow-md">
+                <div className="w-14 h-14 bg-[#0055AD] rounded-full flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  Advanced Protection
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Improves alloy protection and ensures cold protection for optimal engine performance.
                 </p>
               </div>
 
-              <div className="pt-8 border-t border-gray-200">
-                <h2 className="text-4xl font-bold mb-8 text-gray-900 text-center">
-                  Our Values
-                </h2>
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="p-6 bg-gradient-to-br from-blue-50 to-white rounded-xl border border-gray-100">
-                    <h3 className="text-2xl font-bold mb-3 text-gray-900">
-                      Quality First
-                    </h3>
-                    <p className="text-gray-700 leading-relaxed">
-                      We never compromise on quality. Every product undergoes
-                      rigorous testing to ensure it meets our high standards.
-                    </p>
-                  </div>
-                  <div className="p-6 bg-gradient-to-br from-blue-50 to-white rounded-xl border border-gray-100">
-                    <h3 className="text-2xl font-bold mb-3 text-gray-900">
-                      Customer Focus
-                    </h3>
-                    <p className="text-gray-700 leading-relaxed">
-                      Your satisfaction is our priority. We work closely with our
-                      customers to understand their needs and provide solutions.
-                    </p>
-                  </div>
-                  <div className="p-6 bg-gradient-to-br from-blue-50 to-white rounded-xl border border-gray-100">
-                    <h3 className="text-2xl font-bold mb-3 text-gray-900">
-                      Innovation
-                    </h3>
-                    <p className="text-gray-700 leading-relaxed">
-                      We continuously invest in research and development to bring
-                      you the latest advancements in lubricant technology.
-                    </p>
-                  </div>
-                  <div className="p-6 bg-gradient-to-br from-blue-50 to-white rounded-xl border border-gray-100">
-                    <h3 className="text-2xl font-bold mb-3 text-gray-900">
-                      Reliability
-                    </h3>
-                    <p className="text-gray-700 leading-relaxed">
-                      You can count on us for consistent quality and dependable
-                      service, every time.
-                    </p>
-                  </div>
+              {/* Enhanced Performance Card */}
+              <div className="bg-white rounded-xl p-6 shadow-md">
+                <div className="w-14 h-14 bg-[#0055AD] rounded-full flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
                 </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  Enhanced Performance
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Improves speed resilience and reduces performance degradation under extreme conditions.
+                </p>
+              </div>
+
+              {/* Eco-Friendly Formula Card */}
+              <div className="bg-white rounded-xl p-6 shadow-md">
+                <div className="w-14 h-14 bg-[#0055AD] rounded-full flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 2C8 2 5 5 5 9c0 4 3 7 7 7s7-3 7-7c0-4-3-7-7-7z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 2v6" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  Eco-Friendly Formula
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Eco-friendly formula to meet environmental standards and natural flow requirements.
+                </p>
               </div>
             </div>
-          </div>
+          </section>
+
+          {/* Our Values Section */}
+          <section>
+            <h2 className="text-4xl font-bold text-[#0055AD] mb-8 text-center">
+              Our Values
+            </h2>
+            <div className="flex flex-wrap justify-center gap-6">
+              {/* Quality */}
+              <div className="flex items-center gap-3 bg-white rounded-full px-6 py-3 shadow-md">
+                <div className="w-10 h-10 bg-[#0055AD] rounded-full flex items-center justify-center">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <span className="text-lg font-semibold text-gray-900">Quality</span>
+              </div>
+
+              {/* Trust */}
+              <div className="flex items-center gap-3 bg-white rounded-full px-6 py-3 shadow-md">
+                <div className="w-10 h-10 bg-[#0055AD] rounded-full flex items-center justify-center">
+                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <span className="text-lg font-semibold text-gray-900">Trust</span>
+              </div>
+
+              {/* Customer Satisfaction */}
+              <div className="flex items-center gap-3 bg-white rounded-full px-6 py-3 shadow-md">
+                <div className="w-10 h-10 bg-[#0055AD] rounded-full flex items-center justify-center">
+                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <span className="text-lg font-semibold text-gray-900">Customer Satisfaction</span>
+              </div>
+            </div>
+          </section>
+
         </div>
-      </section>
+      </div>
     </div>
   )
 }

@@ -1,42 +1,36 @@
 export default function Contact() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-blue-50">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-white via-blue-50 to-primary-500 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-            Contact Us
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto">
-            Get in touch with NitroLube
-          </p>
-        </div>
-      </section>
+    <div className="min-h-screen bg-gradient-to-b from-[#0055AD] to-blue-300 pt-32 pb-20">
+      {/* Header Section */}
+      <div className="text-center mb-12 px-4">
+        <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
+          Contact Us
+        </h1>
+        <p className="text-xl md:text-2xl text-white">
+          Get in touch with NitroLube
+        </p>
+      </div>
 
-      {/* Contact Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12 lg:gap-16">
-            {/* Contact Information */}
-            <div className="space-y-8">
-              <div>
-                <h2 className="text-4xl font-bold mb-4 text-gray-900">
-                  Visit Our Store
-                </h2>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  We welcome you to visit our physical store to explore our
-                  complete range of premium lubricants. Our knowledgeable staff
-                  will be happy to assist you in finding the perfect product for
-                  your needs.
-                </p>
-              </div>
+      {/* Main Content Card */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
+          <div className="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-gray-200">
+            {/* Left Column - Visit Our Store */}
+            <div className="p-8 md:p-12">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                Visit Our Store
+              </h2>
+              <p className="text-lg text-gray-700 leading-relaxed mb-8">
+                Stop by our store to explore our range of products and get expert advice from our team.
+              </p>
 
-              <div className="space-y-6 pt-4">
-                <div className="flex items-start p-6 bg-white rounded-xl border border-gray-100 shadow-md hover:shadow-lg transition-all">
+              <div className="space-y-4">
+                {/* Address Card */}
+                <div className="flex items-start p-5 bg-white rounded-xl border border-gray-200 shadow-md">
                   <div className="flex-shrink-0">
-                    <div className="w-14 h-14 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl flex items-center justify-center shadow-md">
+                    <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
                       <svg
-                        className="w-7 h-7 text-white"
+                        className="w-6 h-6 text-[#0055AD]"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -56,21 +50,22 @@ export default function Contact() {
                       </svg>
                     </div>
                   </div>
-                  <div className="ml-6">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  <div className="ml-4">
+                    <h3 className="text-lg font-bold text-gray-900 mb-1">
                       Address
                     </h3>
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-sm text-gray-600">
                       Shree Tirupati Motors and Tractors, Ranchi Patna Road Near Ashoka Hotel, Jhumri Telaiya, Jharkhand, 825409
                     </p>
                   </div>
                 </div>
 
-                <div className="flex items-start p-6 bg-white rounded-xl border border-gray-100 shadow-md hover:shadow-lg transition-all">
+                {/* Phone Card */}
+                <div className="flex items-start p-5 bg-white rounded-xl border border-gray-200 shadow-md">
                   <div className="flex-shrink-0">
-                    <div className="w-14 h-14 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl flex items-center justify-center shadow-md">
+                    <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
                       <svg
-                        className="w-7 h-7 text-white"
+                        className="w-6 h-6 text-[#0055AD]"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -84,22 +79,22 @@ export default function Contact() {
                       </svg>
                     </div>
                   </div>
-                  <div className="ml-6">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  <div className="ml-4">
+                    <h3 className="text-lg font-bold text-gray-900 mb-1">
                       Phone
                     </h3>
-                    <p className="text-gray-600 leading-relaxed">
-                      Call us for inquiries about our products and store
-                      information.
+                    <p className="text-sm text-gray-600">
+                      Call us for inquiries about our products and store information.
                     </p>
                   </div>
                 </div>
 
-                <div className="flex items-start p-6 bg-white rounded-xl border border-gray-100 shadow-md hover:shadow-lg transition-all">
+                {/* Store Hours Card */}
+                <div className="flex items-start p-5 bg-white rounded-xl border border-gray-200 shadow-md">
                   <div className="flex-shrink-0">
-                    <div className="w-14 h-14 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl flex items-center justify-center shadow-md">
+                    <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
                       <svg
-                        className="w-7 h-7 text-white"
+                        className="w-6 h-6 text-[#0055AD]"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -113,97 +108,73 @@ export default function Contact() {
                       </svg>
                     </div>
                   </div>
-                  <div className="ml-6">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  <div className="ml-4">
+                    <h3 className="text-lg font-bold text-gray-900 mb-1">
                       Store Hours
                     </h3>
-                    <p className="text-gray-600 leading-relaxed">
-                      Monday - Saturday: 9:00 AM - 6:00 PM
+                    <p className="text-sm text-gray-600">
+                      Mon-Fri: 8:00 am - 5:00 pm
                       <br />
-                      Sunday: Closed
+                      Saturday: 10:00 am - 4:00 pm
                     </p>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Contact Form */}
-            <div className="bg-white rounded-2xl shadow-xl p-10 border border-gray-100">
-              <h2 className="text-4xl font-bold mb-8 text-gray-900">
+            {/* Right Column - Send Us a Message */}
+            <div className="p-8 md:p-12">
+              <h2 className="text-4xl font-bold text-gray-900 mb-8">
                 Send Us a Message
               </h2>
-              <form className="space-y-6">
+              <form className="space-y-5">
                 <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-sm font-semibold text-gray-700 mb-2"
-                  >
-                    Name
-                  </label>
                   <input
                     type="text"
                     id="name"
                     name="name"
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
-                    placeholder="Your name"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0055AD] focus:border-transparent transition-all bg-white"
+                    placeholder="Name"
                   />
                 </div>
                 <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-semibold text-gray-700 mb-2"
-                  >
-                    Email
-                  </label>
                   <input
                     type="email"
                     id="email"
                     name="email"
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
-                    placeholder="your.email@example.com"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0055AD] focus:border-transparent transition-all bg-white"
+                    placeholder="Email"
                   />
                 </div>
                 <div>
-                  <label
-                    htmlFor="phone"
-                    className="block text-sm font-semibold text-gray-700 mb-2"
-                  >
-                    Phone
-                  </label>
                   <input
                     type="tel"
                     id="phone"
                     name="phone"
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
-                    placeholder="Your phone number"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0055AD] focus:border-transparent transition-all bg-white"
+                    placeholder="Phone"
                   />
                 </div>
                 <div>
-                  <label
-                    htmlFor="message"
-                    className="block text-sm font-semibold text-gray-700 mb-2"
-                  >
-                    Message
-                  </label>
                   <textarea
                     id="message"
                     name="message"
                     rows={4}
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
-                    placeholder="Your message..."
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0055AD] focus:border-transparent transition-all bg-white resize-none"
+                    placeholder="Message"
                   ></textarea>
                 </div>
-                <button
-                  type="submit"
-                  className="w-full py-4 px-6 bg-gradient-to-r from-primary-500 to-primary-600 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                <a
+                  href="mailto:support@nitrolube.com"
+                  className="w-full py-3 px-6 bg-[#0055AD] text-white font-semibold rounded-lg transition-all duration-200 hover:bg-[#004a99] shadow-md text-center block"
                 >
                   Send Message
-                </button>
+                </a>
               </form>
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </div>
   )
 }
