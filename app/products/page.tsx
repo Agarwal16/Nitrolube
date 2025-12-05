@@ -90,7 +90,7 @@ export default function ProductsPage() {
     <div className="min-h-screen bg-gradient-to-b from-white to-blue-50 pt-32 pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Category Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {categories.map((category) => (
             <div key={category.id} className="flex flex-col h-full">
               {/* Card Image */}

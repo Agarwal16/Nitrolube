@@ -14,7 +14,7 @@ export default function OtherItemsPage() {
             <p className="text-gray-600 text-lg">No products available in this category.</p>
           </div>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {categoryProducts.map((product) => (
               <div key={product.id} className="bg-white rounded-xl shadow-md p-3 flex flex-col">
                 <div className="relative w-full h-32 bg-gray-100 rounded-lg overflow-hidden mb-3">

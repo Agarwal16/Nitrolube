@@ -4,25 +4,25 @@ export default function Contact() {
       {/* Header Section */}
       <div className="text-center mb-12 px-4">
         <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
-          Contact Us
-        </h1>
+            Contact Us
+          </h1>
         <p className="text-xl md:text-2xl text-white">
-          Get in touch with NitroLube
-        </p>
-      </div>
+            Get in touch with NitroLube
+          </p>
+        </div>
 
       {/* Main Content Card */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
           <div className="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-gray-200">
             {/* Left Column - Visit Our Store */}
             <div className="p-8 md:p-12">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                Visit Our Store
-              </h2>
+                  Visit Our Store
+                </h2>
               <p className="text-lg text-gray-700 leading-relaxed mb-8">
                 Stop by our store to explore our range of products and get expert advice from our team.
-              </p>
+                </p>
 
               <div className="space-y-4">
                 {/* Address Card */}
