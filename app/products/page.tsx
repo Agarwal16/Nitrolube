@@ -17,7 +17,7 @@ export default function ProductsPage() {
   }
   const categories = [
     {
-      id: 1,
+      id: 6,
       title: 'Bike Engine Oil',
       image: '/ChatGPT Image Nov 29, 2025, 03_40_55 PM.png',
       products: [
@@ -27,7 +27,7 @@ export default function ProductsPage() {
       ],
     },
     {
-      id: 2,
+      id: 7,
       title: 'Engine Oil',
       image: '/EngineOil5w30.png',
       products: [
@@ -100,6 +100,7 @@ export default function ProductsPage() {
                     src={category.image}
                     alt={category.title}
                     fill
+                    sizes="(max-width: 768px) 50vw, (max-width: 1024px) 25vw, 20vw"
                     className="object-contain"
                   />
                 </div>

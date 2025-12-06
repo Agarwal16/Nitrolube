@@ -22,6 +22,7 @@ export default function OtherItemsPage() {
                     src="/singleProduct1.webp"
                     alt={product.grade || "Other Item"}
                     fill
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
                     className="object-contain"
                   />
                 </div>

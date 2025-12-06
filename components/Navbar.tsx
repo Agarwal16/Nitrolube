@@ -136,6 +136,7 @@ export default function Navbar() {
                     src="/logoCopy.png"
                     alt="NitroLube Logo"
                     fill
+                    sizes="(max-width: 768px) 40px, 48px"
                     className="object-contain rounded-lg"
                     priority
                   />
@@ -278,7 +279,7 @@ export default function Navbar() {
               <>
                 {/* Logo */}
                 <div className="flex-shrink-0">
-                  <Link href="/" className="flex items-center">
+                  <Link href="/" onClick={() => setIsProductsDropdownOpen(false)} className="flex items-center">
                     <div className="relative w-10 h-10">
                       <Image
                         src="/logoCopy.png"
@@ -362,6 +363,7 @@ export default function Navbar() {
                       <Link
                         key={link.href}
                         href={link.href}
+                        onClick={() => setIsProductsDropdownOpen(false)}
                         className={`relative p-2.5 rounded-lg transition-all duration-200 ${
                           isActive
                             ? 'text-gray-700 bg-white/40'
@@ -378,7 +380,10 @@ export default function Navbar() {
                 <div className="flex-shrink-0">
                   <button
                     type="button"
-                    onClick={() => setIsMobileSearchOpen(true)}
+                    onClick={() => {
+                      setIsMobileSearchOpen(true)
+                      setIsProductsDropdownOpen(false)
+                    }}
                     className="relative p-2.5 rounded-lg transition-all duration-200 text-gray-700 hover:bg-white/40"
                     aria-label="Search"
                   >
@@ -429,29 +434,29 @@ export default function Navbar() {
                       />
                     </svg>
                   </button>
-                  <button
-                    type="button"
+              <button
+                type="button"
                     onClick={() => {
                       setIsMobileSearchOpen(false)
                       setSearchQuery('')
                       setShowSearchResults(false)
                     }}
                     className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-primary-500"
-                  >
-                    <svg
+              >
+                <svg
                       className="w-4 h-4"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
                         d="M6 18L18 6M6 6l12 12"
-                      />
-                    </svg>
-                  </button>
+                  />
+                </svg>
+              </button>
                 </form>
                 
                 {/* Mobile Search Results Dropdown */}
@@ -481,7 +486,7 @@ export default function Navbar() {
                     })}
                   </div>
                 )}
-              </div>
+            </div>
             )}
           </div>
         </div>

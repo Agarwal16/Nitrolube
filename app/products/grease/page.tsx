@@ -22,13 +22,11 @@ export default function GreasePage() {
                     src="/singleProduct1.webp"
                     alt="Grease"
                     fill
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
                     className="object-contain"
                   />
                 </div>
                 <h3 className="font-semibold text-lg mt-3 text-gray-900">Grease</h3>
-                {product.grade && (
-                  <p className="text-sm text-gray-600 mt-1">Grade: {product.grade}</p>
-                )}
                 <p className="text-sm text-gray-600 mt-1">Quantity: {product.quantity}</p>
                 <p className="text-sm text-gray-600 mt-1">MRP: ₹{product.mrp}</p>
                 <button className="mt-auto bg-[#0055AD] text-white py-2 px-4 rounded-2xl hover:bg-[#004a99] transition-colors duration-200 mt-6">
