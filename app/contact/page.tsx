@@ -8,172 +8,77 @@ export default function Contact() {
         <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
           Contact Us
         </h1>
-        <p className="text-xl md:text-2xl text-white">
+        <p className="text-xl md:text-2xl text-white mb-6">
           Get in touch with NitroLube
         </p>
+        
       </div>
 
       {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 gap-12">
-          {/* Left Column - Visit Our Store */}
-          <section>
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Visit Our Store
-            </h2>
-            <p className="text-lg text-white/90 leading-relaxed mb-8">
-              Stop by our store to explore our range of products and get expert
-              advice from our team.
-            </p>
-
-            <div className="space-y-6">
-              {/* Address */}
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
-                  <svg
-                    className="w-6 h-6 text-white"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                    />
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                    />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="text-lg font-bold text-white mb-1">Address</h3>
-                  <p className="text-sm text-white/80">
-                    Shree Tirupati Motors and Tractors, Ranchi Patna Road, Near
-                    Ashoka Hotel, Jhumri Telaiya, Jharkhand, 825409
-                  </p>
-                </div>
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col items-center justify-center space-y-12">
+          {/* Contact Information Card */}
+          <div className="w-full bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+            <div className="flex flex-col items-center text-center space-y-6">
+              <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
+                <svg
+                  className="w-8 h-8 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                </svg>
               </div>
-
-              {/* Phone */}
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
-                  <svg
-                    className="w-6 h-6 text-white"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                    />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="text-lg font-bold text-white mb-1">Phone</h3>
-                  <p className="text-sm text-white/80">+918709735654</p>
-                </div>
-              </div>
-
-              {/* Store Hours */}
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
-                  <svg
-                    className="w-6 h-6 text-white"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="text-lg font-bold text-white mb-1">
-                    Store Hours
-                  </h3>
-                  <p className="text-sm text-white/80">
-                    Mon-Sat: 9:30 am - 7:00 pm
-                  </p>
-                </div>
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-3">Contact</h3>
+                <p className="text-base text-white/90 leading-relaxed">
+                  Abhishek Agarwal, Shree Tirupati Motors and Tractors, +918709735654
+                </p>
               </div>
             </div>
-          </section>
+          </div>
 
-          {/* Right Column - Send Us a Message */}
-          <section>
-            <h2 className="text-4xl font-bold text-white mb-8">
-              Send Us a Message
-            </h2>
-            <form className="space-y-5">
-              <input
-                type="text"
-                id="name"
-                name="name"
-                className="w-full px-4 py-3 border border-white/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent transition-all bg-white/10 backdrop-blur-sm text-white placeholder:text-white/70"
-                placeholder="Name"
-              />
-              <input
-                type="email"
-                id="email"
-                name="email"
-                className="w-full px-4 py-3 border border-white/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent transition-all bg-white/10 backdrop-blur-sm text-white placeholder:text-white/70"
-                placeholder="Email"
-              />
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                inputMode="numeric"
-                maxLength={10}
-                className="w-full px-4 py-3 border border-white/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent transition-all bg-white/10 backdrop-blur-sm text-white placeholder:text-white/70"
-                placeholder="Phone"
-              />
-
-              <textarea
-                id="message"
-                name="message"
-                rows={4}
-                className="w-full px-4 py-3 border border-white/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent transition-all bg-white/10 backdrop-blur-sm resize-none text-white placeholder:text-white/70"
-                placeholder="Message"
-              ></textarea>
-              <a
-                href="mailto:info@nitrolube.co.in"
-                className="w-full py-3 px-6 bg-white text-[#0055AD] font-semibold rounded-lg transition-all duration-200 hover:bg-white/90 text-center block"
-              >
-                Send Message
-              </a>
-            </form>
-          </section>
+          {/* Send Us Your Requirement Button */}
+          <div className="w-full flex justify-center">
+            <a
+              href="mailto:info@nitrolube.co.in"
+              className="w-full sm:w-auto py-4 px-10 bg-white text-[#0055AD] font-semibold rounded-lg transition-all duration-200 hover:bg-white/90 text-center text-lg shadow-lg"
+            >
+              Send us your requirement
+            </a>
+          </div>
         </div>
 
         {/* Partner With Us Section */}
-        <section className="mt-16">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">
-            <div className="max-w-2xl mx-auto">
-              <h2 className="text-4xl font-bold text-white mb-4">
+        <section className="mt-20">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-10 border border-white/20 text-center">
+            <div className="max-w-2xl mx-auto space-y-6">
+              <h2 className="text-4xl font-bold text-white">
                 Interested in Partnering With Us?
               </h2>
-              <p className="text-lg text-white/90 mb-6">
+              <p className="text-lg text-white/90 leading-relaxed">
                 Join our growing network of distributors and retailers. Explore partnership opportunities and grow your business with NitroLube.
               </p>
-              <Link
-                href="/partner-with-us"
-                className="inline-block py-3 px-8 bg-white text-[#0055AD] font-semibold rounded-lg transition-all duration-200 hover:bg-white/90"
-              >
-                Partner With Us
-              </Link>
+              <div className="pt-2">
+                <Link
+                  href="/partner-with-us"
+                  className="inline-block py-3 px-8 bg-white text-[#0055AD] font-semibold rounded-lg transition-all duration-200 hover:bg-white/90 shadow-lg"
+                >
+                  Partner With Us
+                </Link>
+              </div>
             </div>
           </div>
         </section>

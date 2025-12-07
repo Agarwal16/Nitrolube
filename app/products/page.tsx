@@ -17,7 +17,7 @@ export default function ProductsPage() {
     {
       id: 1,
       title: 'Engine Oil',
-      image: '/EngineOil5w30.png',
+      image: '/engineOil1.jpg',
       products: [
         'CNG 20w50 Engine Oil',
         '20W40 Mutigrade Engine Oil',
@@ -36,7 +36,7 @@ export default function ProductsPage() {
     {
       id: 3,
       title: 'Hydraulic Oil',
-      image: '/Engineoil05w30.png',
+      image: '/hydraulicOil1.png',
       products: [
         '20W40 Power Triller Lubricant Oil',
         'ATF Lubricant Oil',

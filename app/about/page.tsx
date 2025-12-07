@@ -15,7 +15,7 @@ export default function About() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Who We Are Section */}
         <section className="mb-12">
-          <h2 className="text-4xl font-bold text-white mb-6">Who We Are</h2>
+          <h2 className="text-4xl font-bold text-white mb-6 text-center">Who We Are</h2>
           <p className="text-base md:text-lg text-white/90 leading-relaxed mb-4">
             Established in 2023, NitroLube is a forward-thinking lubrication
             solutions company dedicated to delivering unmatched quality and
@@ -48,20 +48,168 @@ export default function About() {
 
         {/* Mission Section */}
         <section className="mb-12">
-          <h2 className="text-4xl font-bold text-white mb-6">Our Mission</h2>
-          <p className="text-base md:text-lg text-white/90 leading-relaxed">
-            At NitroLube, our mission is to deliver high-performance lubrication
-            solutions that enhance engine efficiency, protect machinery, and
-            empower businesses across India. We are committed to engineering
-            world-class, technology-driven products that meet the unique demands
-            of Indian roads, industries, and operating conditions. Guided by
-            innovation, reliability, and a deep focus on customer satisfaction, we
-            strive to build long-term partnerships with workshops, distributors,
-            fleet owners, and industrial clients. Our purpose goes beyond
-            supplying lubricants—we aim to support progress, strengthen
-            performance, and create value for every partner we work with. At
-            NitroLube, <span className="font-bold">WE GROW TOGETHER.</span>
-          </p>
+          <h2 className="text-4xl font-bold text-white mb-6 text-center">Our Mission</h2>
+          <div className="text-base md:text-lg text-white/90 leading-relaxed space-y-4">
+            <p>
+              At NitroLube, our mission is to deliver high-performance lubrication solutions that enhance engine efficiency, protect machinery, and empower businesses across India. We are committed to engineering world-class, technology-driven products tailored to the unique demands of Indian roads, industries, and operating conditions.
+            </p>
+            <p>
+              Our journey forward is strengthened by the guidance, deep knowledge, and decades of experience of Mr. Sanjay Agarwal (MD). His strategic vision and understanding of the automotive and industrial landscape play a crucial role in shaping our innovations, ensuring that every product we create truly meets the needs of our customers and the market we serve.
+            </p>
+            <p>
+              Driven by innovation, reliability, and a strong focus on customer satisfaction, we strive to build long-term partnerships with workshops, distributors, fleet owners, and industrial clients. Our mission goes beyond supplying lubricants—we aim to support progress, improve performance, and create lasting value for every partner who chooses NitroLube.
+            </p>
+            <p>
+              At NitroLube, <span className="font-bold">WE GROW TOGETHER.</span>
+            </p>
+          </div>
+        </section>
+
+        {/* Basic Information Section */}
+        <section className="mb-12">
+          <h2 className="text-4xl font-bold text-white mb-6 text-center">Basic Information</h2>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 md:p-8 border border-white/20 max-w-3xl mx-auto">
+            <div className="flex flex-col gap-3">
+              <div className="flex flex-col sm:flex-row gap-2">
+                <span className="text-base text-white/70 font-medium sm:min-w-[200px]">Nature of Business</span>
+                <span className="text-base text-white font-medium hidden sm:inline">-</span>
+                <span className="text-base text-white font-medium">Manufacturer</span>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-2">
+                <span className="text-base text-white/70 font-medium sm:min-w-[200px]">Additional Business</span>
+                <span className="text-base text-white font-medium hidden sm:inline">-</span>
+                <span className="text-base text-white font-medium">Retail Business, Supplier of Services</span>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-2">
+                <span className="text-base text-white/70 font-medium sm:min-w-[200px]">Company CEO</span>
+                <span className="text-base text-white font-medium hidden sm:inline">-</span>
+                <span className="text-base text-white font-medium">Abhishek Agrawal</span>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-2">
+                <span className="text-base text-white/70 font-medium sm:min-w-[200px]">Registered Address</span>
+                <span className="text-base text-white font-medium hidden sm:inline">-</span>
+                <span className="text-base text-white font-medium">Shree Tirupati Motors and Tractors, Ranchi Patna Road, Koderma, Jharkhand, 825409</span>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-2">
+                <span className="text-base text-white/70 font-medium sm:min-w-[200px]">Total Number of Employees</span>
+                <span className="text-base text-white font-medium hidden sm:inline">-</span>
+                <span className="text-base text-white font-medium">Upto 10 People</span>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-2">
+                <span className="text-base text-white/70 font-medium sm:min-w-[200px]">GST No.</span>
+                <span className="text-base text-white font-medium hidden sm:inline">-</span>
+                <span className="text-base text-white font-medium">20AFDPA8291D1Z1</span>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-2">
+                <span className="text-base text-white/70 font-medium sm:min-w-[200px]">GST Registration Date</span>
+                <span className="text-base text-white font-medium hidden sm:inline">-</span>
+                <span className="text-base text-white font-medium">30-01-2023</span>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-2">
+                <span className="text-base text-white/70 font-medium sm:min-w-[200px]">Legal Status of Firm</span>
+                <span className="text-base text-white font-medium hidden sm:inline">-</span>
+                <span className="text-base text-white font-medium">Proprietorship</span>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-2">
+                <span className="text-base text-white/70 font-medium sm:min-w-[200px]">GST Partner Name</span>
+                <span className="text-base text-white font-medium hidden sm:inline">-</span>
+                <span className="text-base text-white font-medium">Sanjay Agrawal</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Statutory Profile Section */}
+        <section className="mb-12">
+          <h2 className="text-4xl font-bold text-white mb-6 text-center">Statutory Profile</h2>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 md:p-8 border border-white/20 max-w-3xl mx-auto">
+            <div className="flex flex-col gap-3">
+              <div className="flex flex-col sm:flex-row gap-2">
+                <span className="text-base text-white/70 font-medium sm:min-w-[200px]">Banking details</span>
+                <span className="text-base text-white font-medium hidden sm:inline">-</span>
+                <span className="text-base text-white font-medium">IDBI Bank</span>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-2">
+                <span className="text-base text-white/70 font-medium sm:min-w-[200px]">Payment Mode</span>
+                <span className="text-base text-white font-medium hidden sm:inline">-</span>
+                <span className="text-base text-white font-medium">Cash, Online, Credit Card, Cheque, DD, Bank Transfer</span>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-2">
+                <span className="text-base text-white/70 font-medium sm:min-w-[200px]">Shipment Mode</span>
+                <span className="text-base text-white font-medium hidden sm:inline">-</span>
+                <span className="text-base text-white font-medium">By Road</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Download Brochure and Test Reports Section */}
+        <section className="mb-12">
+          <div className="max-w-3xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-6">
+              {/* Download Brochure */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
+                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg
+                    className="w-8 h-8 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"
+                    />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">Download Brochure</h3>
+                <p className="text-sm text-white/80 mb-4">Get our complete product catalog and company information</p>
+                <a
+                  href="/brochure.pdf"
+                  download
+                  className="inline-block py-2 px-6 bg-white text-[#0055AD] font-semibold rounded-lg transition-all duration-200 hover:bg-white/90"
+                >
+                  Download PDF
+                </a>
+              </div>
+
+              {/* View Test Reports */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
+                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg
+                    className="w-8 h-8 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"
+                    />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">View Test Reports</h3>
+                <p className="text-sm text-white/80 mb-4">Access our laboratory test reports and certifications</p>
+                <div className="flex flex-wrap justify-center gap-2">
+                  {[1, 2, 3, 4, 5, 6].map((num) => (
+                    <a
+                      key={num}
+                      href={`/labtest${num}.pdf`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block py-2 px-4 bg-white/20 text-white font-medium rounded-lg transition-all duration-200 hover:bg-white/30 text-sm"
+                    >
+                      Report {num}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
         {/* Our Values Section */}
