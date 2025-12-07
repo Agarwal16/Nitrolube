@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function Contact() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#0055AD] to-blue-300 pt-32 pb-20">
@@ -20,7 +22,8 @@ export default function Contact() {
               Visit Our Store
             </h2>
             <p className="text-lg text-white/90 leading-relaxed mb-8">
-              Stop by our store to explore our range of products and get expert advice from our team.
+              Stop by our store to explore our range of products and get expert
+              advice from our team.
             </p>
 
             <div className="space-y-6">
@@ -48,11 +51,10 @@ export default function Contact() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-white mb-1">
-                    Address
-                  </h3>
+                  <h3 className="text-lg font-bold text-white mb-1">Address</h3>
                   <p className="text-sm text-white/80">
-                    Shree Tirupati Motors and Tractors, Ranchi Patna Road Near Ashoka Hotel, Jhumri Telaiya, Jharkhand, 825409
+                    Shree Tirupati Motors and Tractors, Ranchi Patna Road, Near
+                    Ashoka Hotel, Jhumri Telaiya, Jharkhand, 825409
                   </p>
                 </div>
               </div>
@@ -75,12 +77,8 @@ export default function Contact() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-white mb-1">
-                    Phone
-                  </h3>
-                  <p className="text-sm text-white/80">
-                    Call us for inquiries about our products and store information.
-                  </p>
+                  <h3 className="text-lg font-bold text-white mb-1">Phone</h3>
+                  <p className="text-sm text-white/80">+918709735654</p>
                 </div>
               </div>
 
@@ -106,9 +104,7 @@ export default function Contact() {
                     Store Hours
                   </h3>
                   <p className="text-sm text-white/80">
-                    Mon-Fri: 8:00 am - 5:00 pm
-                    <br />
-                    Saturday: 10:00 am - 4:00 pm
+                    Mon-Sat: 9:30 am - 7:00 pm
                   </p>
                 </div>
               </div>
@@ -139,9 +135,12 @@ export default function Contact() {
                 type="tel"
                 id="phone"
                 name="phone"
+                inputMode="numeric"
+                maxLength={10}
                 className="w-full px-4 py-3 border border-white/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent transition-all bg-white/10 backdrop-blur-sm text-white placeholder:text-white/70"
                 placeholder="Phone"
               />
+
               <textarea
                 id="message"
                 name="message"
@@ -150,7 +149,7 @@ export default function Contact() {
                 placeholder="Message"
               ></textarea>
               <a
-                href="mailto:support@nitrolube.com"
+                href="mailto:info@nitrolube.co.in"
                 className="w-full py-3 px-6 bg-white text-[#0055AD] font-semibold rounded-lg transition-all duration-200 hover:bg-white/90 text-center block"
               >
                 Send Message
@@ -158,15 +157,27 @@ export default function Contact() {
             </form>
           </section>
         </div>
+
+        {/* Partner With Us Section */}
+        <section className="mt-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">
+            <div className="max-w-2xl mx-auto">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Interested in Partnering With Us?
+              </h2>
+              <p className="text-lg text-white/90 mb-6">
+                Join our growing network of distributors and retailers. Explore partnership opportunities and grow your business with NitroLube.
+              </p>
+              <Link
+                href="/partner-with-us"
+                className="inline-block py-3 px-8 bg-white text-[#0055AD] font-semibold rounded-lg transition-all duration-200 hover:bg-white/90"
+              >
+                Partner With Us
+              </Link>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
-  )
+  );
 }
-
-
-
-
-
-
-
-

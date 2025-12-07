@@ -1,6 +1,12 @@
 import Image from 'next/image'
 import { products } from '@/data/products'
 
+const greaseImages = [
+  "/grease1.png",
+  "/grease2.png",
+  "/grease3.png",
+];
+
 export default function GreasePage() {
   const categoryProducts = products.grease || []
 
@@ -15,20 +21,20 @@ export default function GreasePage() {
           </div>
         ) : (
           <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {categoryProducts.map((product) => (
+            {categoryProducts.map((product, index) => (
               <div key={product.id} className="bg-white rounded-xl shadow-md p-3 flex flex-col">
                 <div className="relative w-full h-32 bg-gray-100 rounded-lg overflow-hidden mb-3">
                   <Image
-                    src="/singleProduct1.webp"
+                    src={greaseImages[index % greaseImages.length]}
                     alt="Grease"
                     fill
                     sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
                     className="object-contain"
                   />
                 </div>
-                <h3 className="font-semibold text-lg mt-3 text-gray-900">Grease</h3>
+                <h3 className="font-semibold text-lg mt-3 text-gray-900">{product.name}</h3>
                 <p className="text-sm text-gray-600 mt-1">Quantity: {product.quantity}</p>
-                <p className="text-sm text-gray-600 mt-1">MRP: ₹{product.mrp}</p>
+                {product.mrp && <p className="text-sm text-gray-600 mt-1">MRP: ₹{product.mrp}</p>}
                 <button className="mt-auto bg-[#0055AD] text-white py-2 px-4 rounded-2xl hover:bg-[#004a99] transition-colors duration-200 mt-6">
                   Buy Now
                 </button>

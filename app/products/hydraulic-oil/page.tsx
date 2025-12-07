@@ -1,6 +1,11 @@
 import Image from 'next/image'
 import { products } from '@/data/products'
 
+const hydraulicOilImages = [
+  "/hydraulicOil1.png",
+  "/hydraulicOil2.png",
+];
+
 export default function HydraulicOilPage() {
   const categoryProducts = products.hydOil || []
 
@@ -15,11 +20,11 @@ export default function HydraulicOilPage() {
           </div>
         ) : (
           <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {categoryProducts.map((product) => (
+            {categoryProducts.map((product, index) => (
               <div key={product.id} className="bg-white rounded-xl shadow-md p-3 flex flex-col">
                 <div className="relative w-full h-32 bg-gray-100 rounded-lg overflow-hidden mb-3">
                   <Image
-                    src="/Engineoil05w30.png"
+                    src={hydraulicOilImages[index % hydraulicOilImages.length]}
                     alt="Hydraulic Oil"
                     fill
                     sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
@@ -31,7 +36,7 @@ export default function HydraulicOilPage() {
                   <p className="text-sm text-gray-600 mt-1">Grade: {product.grade}</p>
                 )}
                 <p className="text-sm text-gray-600 mt-1">Quantity: {product.quantity}</p>
-                <p className="text-sm text-gray-600 mt-1">MRP: ₹{product.mrp}</p>
+                {product.mrp && <p className="text-sm text-gray-600 mt-1">MRP: ₹{product.mrp}</p>}
                 <button className="mt-auto bg-[#0055AD] text-white py-2 px-4 rounded-2xl hover:bg-[#004a99] transition-colors duration-200 mt-6">
                   Buy Now
                 </button>

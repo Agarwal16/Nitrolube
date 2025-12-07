@@ -6,9 +6,7 @@ export default function ProductsPage() {
   const getCategoryRoute = (title: string) => {
     const routeMap: { [key: string]: string } = {
       'Engine Oil': '/products/engine-oil',
-      'Bike Engine Oil': '/products/engine-oil',
       'Gear Oil': '/products/gear-oil',
-      'Lubricant Oil': '/products/hydraulic-oil',
       'Hydraulic Oil': '/products/hydraulic-oil',
       'Grease': '/products/grease',
       'Other Items': '/products/other-items',
@@ -17,23 +15,22 @@ export default function ProductsPage() {
   }
   const categories = [
     {
-      id: 6,
-      title: 'Bike Engine Oil',
-      image: '/ChatGPT Image Nov 29, 2025, 03_40_55 PM.png',
-      products: [
-        '20W40 Bike Engine Oil',
-        '10W30 Bike Engine Oil',
-        'Best Engine Oil',
-      ],
-    },
-    {
-      id: 7,
+      id: 1,
       title: 'Engine Oil',
       image: '/EngineOil5w30.png',
       products: [
         'CNG 20w50 Engine Oil',
         '20W40 Mutigrade Engine Oil',
         '10W30 Scooty Engine Oil',
+      ],
+    },
+    {
+      id: 2,
+      title: 'Gear Oil',
+      image: '/Gearoil.png',
+      products: [
+        'EP 140 Automotive Gear Oil',
+        'EP 90 Automotive Gear Oil',
       ],
     },
     {
@@ -48,42 +45,21 @@ export default function ProductsPage() {
     },
     {
       id: 4,
-      title: 'Gear Oil',
-      image: '/Gearoil.png',
+      title: 'Grease',
+      image: '/grease1.png',
       products: [
-        'EP 140 Automotive Gear Oil',
-        'EP 90 Automotive Gear Oil',
-      ],
-    },
-    {
-      id: 1,
-      title: 'Bike Engine Oil',
-      image: '/ChatGPT Image Nov 29, 2025, 03_40_55 PM.png',
-      products: [
-        '20W40 Bike Engine Oil',
-        '10W30 Bike Engine Oil',
-        'Best Engine Oil',
+        'Premium Grease',
+        'Industrial Grease',
       ],
     },
     {
       id: 5,
-      title: 'Gear Oil',
-      image: '/Gearoil.png',
+      title: 'Other Items',
+      image: '/singleProduct1.webp',
       products: [
-        'EP 140 Automotive Gear Oil',
-        'EP 90 Automotive Gear Oil',
+        'Other Products',
       ],
     },
-    {
-      id: 2,
-      title: 'Engine Oil',
-      image: '/EngineOil5w30.png',
-      products: [
-        'CNG 20w50 Engine Oil',
-        '20W40 Mutigrade Engine Oil',
-        '10W30 Scooty Engine Oil',
-      ],
-    }
   ]
 
   return (

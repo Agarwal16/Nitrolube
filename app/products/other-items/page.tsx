@@ -20,14 +20,14 @@ export default function OtherItemsPage() {
                 <div className="relative w-full h-32 bg-gray-100 rounded-lg overflow-hidden mb-3">
                   <Image
                     src="/singleProduct1.webp"
-                    alt={product.grade || "Other Item"}
+                    alt={product.name || "Other Item"}
                     fill
                     sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
                     className="object-contain"
                   />
                 </div>
                 <h3 className="font-semibold text-lg mt-3 text-gray-900">
-                  {product.grade || "Other Item"}
+                  {product.name || "Other Item"}
                 </h3>
                 <p className="text-sm text-gray-600 mt-1">Quantity: {product.quantity}</p>
                 <p className="text-sm text-gray-600 mt-1">MRP: ₹{product.mrp}</p>
