@@ -74,7 +74,7 @@ export default function Footer() {
                   info@nitrolube.co.in
                 </a>
                 <a
-                  href="tel:918709735654"
+                  href="tel:+918709735654"
                   className="text-blue-100 hover:text-white transition-colors whitespace-nowrap text-xs md:text-sm"
                 >
                   +918709735654
