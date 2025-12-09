@@ -1,4 +1,40 @@
+'use client'
+
+import { useEffect } from 'react'
+import { useRouter } from 'next/navigation'
+
 export default function About() {
+  const router = useRouter()
+
+  useEffect(() => {
+    let lastScrollTop = window.pageYOffset || document.documentElement.scrollTop
+    let isScrolling = false
+
+    const handleScroll = () => {
+      if (isScrolling) return
+
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop
+      const scrollHeight = document.documentElement.scrollHeight
+      const clientHeight = document.documentElement.clientHeight
+      const isAtBottom = scrollTop + clientHeight >= scrollHeight - 10
+      const isAtTop = scrollTop <= 10
+      const isScrollingUp = scrollTop < lastScrollTop
+
+      if (isAtBottom && scrollTop > lastScrollTop) {
+        isScrolling = true
+        router.push('/products')
+      } else if (isAtTop && isScrollingUp && lastScrollTop > 50) {
+        isScrolling = true
+        router.push('/')
+      }
+
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [router])
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#0055AD] to-blue-300 pt-32 pb-20">
       {/* Header Section */}

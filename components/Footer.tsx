@@ -2,17 +2,17 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-primary-500 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        <div className="flex flex-col items-center space-y-8 md:space-y-12">
+    <footer className="bg-primary-500 text-white fixed bottom-0 left-0 right-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-1">
+        <div className="flex flex-col items-center space-y-2 md:space-y-3">
           {/* Link Groups - Flex Container */}
           <div className="w-full flex justify-around items-start flex-nowrap gap-4 md:gap-4">
             {/* Quick Links */}
             <div className="flex flex-col items-center text-xs md:text-sm flex-1 min-w-0">
-              <h3 className="text-sm md:text-base font-semibold mb-2 text-white whitespace-nowrap">
+              <h3 className="text-sm md:text-base font-semibold mb-1 text-white whitespace-nowrap">
                 Quick Links
               </h3>
-              <div className="flex flex-row items-center gap-2 md:gap-3 flex-nowrap justify-center">
+              <div className="flex flex-row items-center gap-1 md:gap-2 flex-nowrap justify-center">
                 <a
                   href="https://www.facebook.com/people/NitroLube/61584391217683/?sfnsn=wa"
                   target="_blank"
@@ -63,10 +63,10 @@ export default function Footer() {
 
             {/* Contact */}
             <div className="flex flex-col items-center text-xs md:text-sm flex-1 min-w-0">
-              <h3 className="text-sm md:text-base font-semibold mb-2 text-white whitespace-nowrap">
+              <h3 className="text-sm md:text-base font-semibold mb-1 text-white whitespace-nowrap">
                 Contact
               </h3>
-              <div className="flex flex-col items-center gap-2 md:gap-3">
+              <div className="flex flex-col md:flex-row items-center gap-1 md:gap-2">
                 <a
                   href="mailto:info@nitrolube.co.in"
                   className="text-blue-100 hover:text-white transition-colors whitespace-nowrap text-xs md:text-sm"
@@ -84,10 +84,10 @@ export default function Footer() {
 
             {/* Company */}
             <div className="flex flex-col items-center text-xs md:text-sm flex-1 min-w-0">
-              <h3 className="text-sm md:text-base font-semibold mb-2 text-white whitespace-nowrap">
+              <h3 className="text-sm md:text-base font-semibold mb-1 text-white whitespace-nowrap">
                 Company
               </h3>
-              <div className="flex flex-col items-center gap-2 md:gap-3">
+              <div className="flex flex-col md:flex-row items-center gap-1 md:gap-2">
                 <Link
                   href="/about"
                   className="text-blue-100 hover:text-white transition-colors whitespace-nowrap text-xs md:text-sm"
@@ -109,14 +109,6 @@ export default function Footer() {
               </div>
             </div>
           </div>
-
-          {/* Horizontal Divider */}
-          <div className="w-full border-t border-white/20 pt-4" />
-
-          {/* Copyright */}
-          <p className="text-xs text-blue-100 text-center">
-            © {new Date().getFullYear()} NitroLube. All rights reserved.
-          </p>
         </div>
       </div>
     </footer>
