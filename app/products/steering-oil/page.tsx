@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { products } from '@/data/products'
 
 const steeringOilImages = [
-  "/singleProduct1.webp",
+  "/steeringoil.png",
 ];
 
 export default function SteeringOilPage() {
@@ -79,4 +79,6 @@ export default function SteeringOilPage() {
     </div>
   )
 }
+
+
 

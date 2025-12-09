@@ -5,7 +5,8 @@ import Image from 'next/image'
 import { products } from '@/data/products'
 
 const coolantImages = [
-  "/singleProduct1.webp",
+  "/coolant1.png",
+  "/coolant2.png",
 ];
 
 export default function CoolantPage() {
@@ -84,4 +85,6 @@ export default function CoolantPage() {
     </div>
   )
 }
+
+
 

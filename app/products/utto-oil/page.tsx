@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { products } from '@/data/products'
 
 const uttoOilImages = [
-  "/singleProduct1.webp",
+  "/uttooil.png",
 ];
 
 export default function UttoOilPage() {
@@ -79,4 +79,6 @@ export default function UttoOilPage() {
     </div>
   )
 }
+
+
 

@@ -5,7 +5,8 @@ import Image from 'next/image'
 import { products } from '@/data/products'
 
 const brakeOilImages = [
-  "/singleProduct1.webp",
+  "/brakeoil1.png",
+  "/brakeoil2.png",
 ];
 
 export default function BrakeOilPage() {
@@ -79,4 +80,6 @@ export default function BrakeOilPage() {
     </div>
   )
 }
+
+
 

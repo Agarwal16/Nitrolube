@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { products } from '@/data/products'
 
 const shockerOilImages = [
-  "/singleProduct1.webp",
+  "/shockeroil.png",
 ];
 
 export default function ShockerOilPage() {
@@ -79,4 +79,6 @@ export default function ShockerOilPage() {
     </div>
   )
 }
+
+
 
