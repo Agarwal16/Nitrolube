@@ -43,7 +43,11 @@ export default function ProductsPage() {
       'Gear Oil': '/products/gear-oil',
       'Hydraulic Oil': '/products/hydraulic-oil',
       'Grease': '/products/grease',
-      'Other Items': '/products/other-items',
+      'Brake Oil': '/products/brake-oil',
+      'Steering Oil': '/products/steering-oil',
+      'Shocker Oil': '/products/shocker-oil',
+      'Coolant': '/products/coolant',
+      'UTTO Oil': '/products/utto-oil',
     }
     return routeMap[title] || '/products'
   }
@@ -88,10 +92,44 @@ export default function ProductsPage() {
     },
     {
       id: 5,
-      title: 'Other Items',
+      title: 'Brake Oil',
       image: '/singleProduct1.webp',
       products: [
-        'Other Products',
+        'DOT-3 Brake Oil',
+        'DOT-4 Brake Oil',
+      ],
+    },
+    {
+      id: 6,
+      title: 'Steering Oil',
+      image: '/singleProduct1.webp',
+      products: [
+        'Power Steering Oil',
+      ],
+    },
+    {
+      id: 7,
+      title: 'Shocker Oil',
+      image: '/singleProduct1.webp',
+      products: [
+        'Shocker Oil',
+      ],
+    },
+    {
+      id: 8,
+      title: 'Coolant',
+      image: '/singleProduct1.webp',
+      products: [
+        'Coolant 1:4',
+        'Coolant 1:7',
+      ],
+    },
+    {
+      id: 9,
+      title: 'UTTO Oil',
+      image: '/singleProduct1.webp',
+      products: [
+        'UTTO Oil',
       ],
     },
   ]

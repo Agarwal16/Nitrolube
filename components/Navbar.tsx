@@ -32,7 +32,11 @@ export default function Navbar() {
         gearOil: '/products/gear-oil',
         hydOil: '/products/hydraulic-oil',
         grease: '/products/grease',
-        otherItems: '/products/other-items',
+        brakeOil: '/products/brake-oil',
+        steeringOil: '/products/steering-oil',
+        shockerOil: '/products/shocker-oil',
+        coolant: '/products/coolant',
+        uttoOil: '/products/utto-oil',
       }
       
       items.forEach((product) => {
@@ -182,8 +186,20 @@ export default function Navbar() {
                           <Link href="/products/grease" className="block px-3 py-2 text-sm text-gray-700 hover:bg-[#0055AD15] rounded-lg mx-2 transition-colors duration-200">
                             Grease
                           </Link>
-                          <Link href="/products/other-items" className="block px-3 py-2 text-sm text-gray-700 hover:bg-[#0055AD15] rounded-lg mx-2 transition-colors duration-200">
-                            Other Items
+                          <Link href="/products/brake-oil" className="block px-3 py-2 text-sm text-gray-700 hover:bg-[#0055AD15] rounded-lg mx-2 transition-colors duration-200">
+                            Brake Oil
+                          </Link>
+                          <Link href="/products/steering-oil" className="block px-3 py-2 text-sm text-gray-700 hover:bg-[#0055AD15] rounded-lg mx-2 transition-colors duration-200">
+                            Steering Oil
+                          </Link>
+                          <Link href="/products/shocker-oil" className="block px-3 py-2 text-sm text-gray-700 hover:bg-[#0055AD15] rounded-lg mx-2 transition-colors duration-200">
+                            Shocker Oil
+                          </Link>
+                          <Link href="/products/coolant" className="block px-3 py-2 text-sm text-gray-700 hover:bg-[#0055AD15] rounded-lg mx-2 transition-colors duration-200">
+                            Coolant
+                          </Link>
+                          <Link href="/products/utto-oil" className="block px-3 py-2 text-sm text-gray-700 hover:bg-[#0055AD15] rounded-lg mx-2 transition-colors duration-200">
+                            UTTO Oil
                           </Link>
                         </div>
                       </div>
@@ -329,8 +345,20 @@ export default function Navbar() {
                               <Link href="/products/grease" onClick={() => setIsProductsDropdownOpen(false)} className="block px-3 py-2 text-sm text-gray-700 hover:bg-[#0055AD15] rounded-lg mx-2 transition-colors duration-200">
                                 Grease
                               </Link>
-                              <Link href="/products/other-items" onClick={() => setIsProductsDropdownOpen(false)} className="block px-3 py-2 text-sm text-gray-700 hover:bg-[#0055AD15] rounded-lg mx-2 transition-colors duration-200">
-                                Other Items
+                              <Link href="/products/brake-oil" onClick={() => setIsProductsDropdownOpen(false)} className="block px-3 py-2 text-sm text-gray-700 hover:bg-[#0055AD15] rounded-lg mx-2 transition-colors duration-200">
+                                Brake Oil
+                              </Link>
+                              <Link href="/products/steering-oil" onClick={() => setIsProductsDropdownOpen(false)} className="block px-3 py-2 text-sm text-gray-700 hover:bg-[#0055AD15] rounded-lg mx-2 transition-colors duration-200">
+                                Steering Oil
+                              </Link>
+                              <Link href="/products/shocker-oil" onClick={() => setIsProductsDropdownOpen(false)} className="block px-3 py-2 text-sm text-gray-700 hover:bg-[#0055AD15] rounded-lg mx-2 transition-colors duration-200">
+                                Shocker Oil
+                              </Link>
+                              <Link href="/products/coolant" onClick={() => setIsProductsDropdownOpen(false)} className="block px-3 py-2 text-sm text-gray-700 hover:bg-[#0055AD15] rounded-lg mx-2 transition-colors duration-200">
+                                Coolant
+                              </Link>
+                              <Link href="/products/utto-oil" onClick={() => setIsProductsDropdownOpen(false)} className="block px-3 py-2 text-sm text-gray-700 hover:bg-[#0055AD15] rounded-lg mx-2 transition-colors duration-200">
+                                UTTO Oil
                               </Link>
                             </div>
                           )}
