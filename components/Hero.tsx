@@ -14,7 +14,7 @@ export default function Hero() {
       />
       {/* Desktop Image */}
       <Image
-        src="/herosectionimage.png"
+        src="/herosectionfinal.png"
         alt="Hero Background"
         fill
         sizes="100vw"
