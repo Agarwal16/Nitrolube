@@ -1,11 +1,12 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 
 export default function Contact() {
   const router = useRouter()
+  const [isExiting, setIsExiting] = useState(false)
 
   useEffect(() => {
     let lastScrollTop = window.pageYOffset || document.documentElement.scrollTop
@@ -20,7 +21,10 @@ export default function Contact() {
 
       if (isAtTop && isScrollingUp && lastScrollTop > 50) {
         isScrolling = true
-        router.push('/products')
+        setIsExiting(true)
+        setTimeout(() => {
+          router.push('/products')
+        }, 400)
       }
 
       lastScrollTop = scrollTop <= 0 ? 0 : scrollTop
@@ -31,7 +35,7 @@ export default function Contact() {
   }, [router])
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#0055AD] to-blue-300 pt-32 pb-20">
+    <div className={`w-full min-h-screen bg-gradient-to-b from-[#0055AD] to-blue-300 pt-32 pb-20 ${isExiting ? 'page-transition-exit' : 'page-transition-enter'}`}>
       {/* Header Section */}
       <div className="text-center mb-12 px-4">
         <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">

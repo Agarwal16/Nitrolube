@@ -1,11 +1,12 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import Hero from '@/components/Hero'
 
 export default function Home() {
   const router = useRouter()
+  const [isExiting, setIsExiting] = useState(false)
 
   useEffect(() => {
     let lastScrollTop = 0
@@ -21,7 +22,10 @@ export default function Home() {
 
       if (isAtBottom && scrollTop > lastScrollTop) {
         isScrolling = true
-        router.push('/about')
+        setIsExiting(true)
+        setTimeout(() => {
+          router.push('/about')
+        }, 400)
       }
 
       lastScrollTop = scrollTop <= 0 ? 0 : scrollTop
@@ -32,7 +36,7 @@ export default function Home() {
   }, [router])
 
   return (
-    <div>
+    <div className={`w-full min-h-screen ${isExiting ? 'page-transition-exit' : 'page-transition-enter'}`}>
       {/* Hero Section */}
       <Hero />
     </div>

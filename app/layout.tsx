@@ -20,7 +20,7 @@ export default function RootLayout({
       </head>
       <body className="font-sans antialiased bg-white">
         <Navbar />
-        <main className="min-h-screen pb-16">
+        <main className="min-h-screen pb-16 relative z-10">
           {children}
         </main>
         <Footer />

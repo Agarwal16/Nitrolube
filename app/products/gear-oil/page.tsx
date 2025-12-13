@@ -34,31 +34,31 @@ export default function GearOilPage() {
 
                 return (
                   <div className="bg-white rounded-xl shadow-md p-3 flex flex-col">
-                    <div className="relative w-full h-32 bg-gray-100 rounded-lg overflow-hidden mb-3">
-                      <Image
-                        src={gearOilImages[index % gearOilImages.length]}
-                        alt="Gear Oil"
-                        fill
-                        sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                        className="object-contain"
-                      />
-                    </div>
-                    <h3 className="font-semibold text-lg mt-3 text-gray-900">
-                      Gear Oil
-                    </h3>
-                    {product.grade && (
-                      <p className="text-sm text-gray-600 mt-1">
-                        Grade: {product.grade}
-                      </p>
-                    )}
-                    <p className="text-sm text-gray-600 mt-1">
+                <div className="relative w-full h-32 bg-gray-100 rounded-lg overflow-hidden mb-3">
+                  <Image
+                    src={gearOilImages[index % gearOilImages.length]}
+                    alt="Gear Oil"
+                    fill
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                    className="object-contain"
+                  />
+                </div>
+                <h3 className="font-semibold text-lg mt-3 text-gray-900">
+                  Gear Oil
+                </h3>
+                {product.grade && (
+                  <p className="text-sm text-gray-600 mt-1">
+                    Grade: {product.grade}
+                  </p>
+                )}
+                <p className="text-sm text-gray-600 mt-1">
                       {selectedSize}
-                    </p>
+                </p>
                     {selectedSizeData.mrp && (
-                      <p className="text-sm text-gray-600 mt-1">
+                  <p className="text-sm text-gray-600 mt-1">
                         MRP: ₹{selectedSizeData.mrp}
-                      </p>
-                    )}
+                  </p>
+                )}
                     <div className="flex items-center gap-2 mt-2">
                       <p className="text-sm text-gray-600 font-medium">Pack sizes</p>
                       <select
@@ -79,7 +79,7 @@ export default function GearOilPage() {
                     >
                       Get quote
                     </a>
-                  </div>
+              </div>
                 );
               };
               return <ProductCard key={`${product.grade}-${index}`} />;

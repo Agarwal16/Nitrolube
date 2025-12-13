@@ -1,12 +1,13 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
 
 export default function ProductsPage() {
   const router = useRouter()
+  const [isExiting, setIsExiting] = useState(false)
 
   useEffect(() => {
     let lastScrollTop = window.pageYOffset || document.documentElement.scrollTop
@@ -24,10 +25,16 @@ export default function ProductsPage() {
 
       if (isAtBottom && scrollTop > lastScrollTop) {
         isScrolling = true
-        router.push('/contact')
+        setIsExiting(true)
+        setTimeout(() => {
+          router.push('/contact')
+        }, 400)
       } else if (isAtTop && isScrollingUp && lastScrollTop > 50) {
         isScrolling = true
-        router.push('/about')
+        setIsExiting(true)
+        setTimeout(() => {
+          router.push('/about')
+        }, 400)
       }
 
       lastScrollTop = scrollTop <= 0 ? 0 : scrollTop
@@ -135,7 +142,7 @@ export default function ProductsPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-blue-50 pt-32 pb-20">
+    <div className={`w-full min-h-screen bg-gradient-to-b from-white to-blue-50 pt-32 pb-20 ${isExiting ? 'page-transition-exit' : 'page-transition-enter'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Category Cards Grid */}
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
