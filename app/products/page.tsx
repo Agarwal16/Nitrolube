@@ -100,7 +100,7 @@ export default function ProductsPage() {
     {
       id: 5,
       title: 'Brake Oil',
-      image: '/singleProduct1.webp',
+      image: '/brakeoil1.png',
       products: [
         'DOT-3 Brake Oil',
         'DOT-4 Brake Oil',
@@ -109,7 +109,7 @@ export default function ProductsPage() {
     {
       id: 6,
       title: 'Steering Oil',
-      image: '/singleProduct1.webp',
+      image: '/steeringoil.png',
       products: [
         'Power Steering Oil',
       ],
@@ -117,7 +117,7 @@ export default function ProductsPage() {
     {
       id: 7,
       title: 'Shocker Oil',
-      image: '/singleProduct1.webp',
+      image: '/shockeroil.png',
       products: [
         'Shocker Oil',
       ],
@@ -125,7 +125,7 @@ export default function ProductsPage() {
     {
       id: 8,
       title: 'Coolant',
-      image: '/singleProduct1.webp',
+      image: '/coolant1.png',
       products: [
         'Coolant 1:4',
         'Coolant 1:7',
@@ -134,7 +134,7 @@ export default function ProductsPage() {
     {
       id: 9,
       title: 'UTTO Oil',
-      image: '/singleProduct1.webp',
+      image: '/uttooil.png',
       products: [
         'UTTO Oil',
       ],
