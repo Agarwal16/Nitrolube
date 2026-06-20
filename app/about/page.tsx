@@ -1,334 +1,250 @@
 'use client'
 
-import { useEffect, useState } from 'react'
-import { useRouter } from 'next/navigation'
+import Link from 'next/link'
 
 export default function About() {
-  const router = useRouter()
-  const [isExiting, setIsExiting] = useState(false)
+  const basicInfo = [
+    { label: 'Nature of Business', value: 'Manufacturer' },
+    { label: 'Additional Business', value: 'Retail Business, Supplier' },
+    { label: 'Company CEO', value: 'Abhishek Agrawal' },
+    { label: 'Registered Address', value: 'Shree Tirupati Motors & Tractors, Ranchi Patna Road, Koderma, Jharkhand, 825409' },
+    { label: 'Total Employees', value: 'Upto 10 People' },
+    { label: 'GST No.', value: '20AFDPA8291D1Z1' },
+    { label: 'GST Reg Date', value: '30-01-2023' },
+    { label: 'Legal Status', value: 'Proprietorship' },
+    { label: 'GST Partner Name', value: 'Sanjay Agrawal' },
+  ]
 
-  useEffect(() => {
-    let lastScrollTop = window.pageYOffset || document.documentElement.scrollTop
-    let isScrolling = false
+  const statutoryProfile = [
+    { label: 'Banking details', value: 'IDBI Bank' },
+    { label: 'Payment Mode', value: 'Cash, Online, Card, Cheque, DD, Transfer' },
+    { label: 'Shipment Mode', value: 'By Road' },
+  ]
 
-    const handleScroll = () => {
-      if (isScrolling) return
+  const reportNames = [
+    'Viscosity Index Analysis',
+    'High-Temp Stability Report',
+    'Wear & Friction Performance',
+    'Shear Stability Assessment',
+    'Radiator Coolant Test',
+    'Flash & Fire Point Audit',
+  ]
 
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop
-      const scrollHeight = document.documentElement.scrollHeight
-      const clientHeight = document.documentElement.clientHeight
-      const isAtBottom = scrollTop + clientHeight >= scrollHeight - 10
-      const isAtTop = scrollTop <= 10
-      const isScrollingUp = scrollTop < lastScrollTop
-
-      if (isAtBottom && scrollTop > lastScrollTop) {
-        isScrolling = true
-        setIsExiting(true)
-        setTimeout(() => {
-          router.push('/products')
-        }, 400)
-      } else if (isAtTop && isScrollingUp && lastScrollTop > 50) {
-        isScrolling = true
-        setIsExiting(true)
-        setTimeout(() => {
-          router.push('/')
-        }, 400)
-      }
-
-      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop
-    }
-
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [router])
+  const values = [
+    {
+      title: 'Quality First',
+      description: 'Strict adherence to ISO 9001:2015 specifications and rigorous batch-testing routines.',
+      icon: (
+        <svg className="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+        </svg>
+      ),
+    },
+    {
+      title: 'Absolute Trust',
+      description: 'Building honest, long-term trade relations with distributors and retail counter networks.',
+      icon: (
+        <svg className="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 009 11V5a2 2 0 00-2-2H5a2 2 0 00-2 2v6c0 4.7 3.01 8.7 7.244 10.156l.08.026a23.866 23.866 0 004.536-1.666m-1.12-12.43a2 2 0 01-2 2h-2m2-2h2a2 2 0 002-2V3a2 2 0 00-2-2h-3.75a2 2 0 00-2 2v6a2 2 0 002 2z" />
+        </svg>
+      ),
+    },
+    {
+      title: 'Customer Success',
+      description: 'Going above and beyond to support mechanical efficiency and retail profitability.',
+      icon: (
+        <svg className="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      ),
+    },
+  ]
 
   return (
-    <div className={`w-full min-h-screen bg-gradient-to-b from-[#0055AD] to-blue-300 pt-32 pb-20 ${isExiting ? 'page-transition-exit' : 'page-transition-enter'}`}>
-      {/* Header Section */}
-      <div className="text-center mb-12 px-4">
-        <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
-          About Us
-        </h1>
-        <p className="text-xl md:text-2xl text-white">
-          The Story Behind NitroLube
-        </p>
-      </div>
+    <div className="page-top-tight min-h-screen bg-[#0a0f1d] text-white pb-16 md:pb-24 relative bg-doodle animate-fade-in-up">
+      <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-indigo-500/10 rounded-full blur-[120px] pointer-events-none" />
 
-      {/* Main Content Container */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Who We Are Section */}
-        <section className="mb-12">
-          <h2 className="text-4xl font-bold text-white mb-6 text-center">Who We Are</h2>
-          <p className="text-base md:text-lg text-white/90 leading-relaxed mb-4">
-            Established in 2023, NitroLube is a forward-thinking lubrication
-            solutions company dedicated to delivering unmatched quality and
-            performance across both automotive and industrial sectors. Built on
-            innovation, engineering expertise, and a deep understanding of
-            India’s evolving market, we are committed to redefining what modern
-            lubrication stands for. At NitroLube, our team of innovators,
-            engineers, and field specialists works tirelessly to develop
-            technology-driven formulations that meet global standards while
-            addressing real-world Indian conditions. Whether it’s two-wheelers,
-            commercial fleets, industrial machinery, or specialized
-            applications, our products are designed to enhance performance,
-            extend engine and equipment life, and ensure reliability—every
-            single time. Backed by a rapidly expanding national presence and
-            driven by strong customer trust, NitroLube has positioned itself as
-            a dependable partner for workshops, distributors, retailers, fleet
-            owners, and industries across India. Our purpose is simple yet
-            powerful: to deliver lubrication solutions that empower businesses,
-            protect machinery, and keep India moving forward. NitroLube —
-            engineered for performance, trusted for protection.
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-left">
+        
+        {/* Header Section */}
+        <div className="text-center mb-16 space-y-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 text-xs font-semibold tracking-wider uppercase">
+            <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
+            Learn About Our Heritage
+          </div>
+          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight">
+            About <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-indigo-400">NitroLube</span>
+          </h1>
+          <p className="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed text-center">
+            Pioneering engineering expertise in high-performance lubrication products designed to extend machinery lifespan and optimize power.
           </p>
-          <p className="text-base md:text-lg text-white/90 leading-relaxed">
-            We understand that your equipment deserves the best care, which is
-            why we offer a comprehensive range of lubricants designed to enhance
-            performance, reduce wear, and extend the lifespan of your machinery.
-            Whether you need engine oils, industrial lubricants, or specialty
-            products, NitroLube has you covered.
-          </p>
-        </section>
+        </div>
 
-        {/* Mission Section */}
-        <section className="mb-12">
-          <h2 className="text-4xl font-bold text-white mb-6 text-center">Our Mission</h2>
-          <div className="text-base md:text-lg text-white/90 leading-relaxed space-y-4">
-            <p>
+        {/* Milestones Statistic Highlights */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+          {[
+            { label: 'Established', val: '2023' },
+            { label: 'Quality Standard', val: 'ISO 9001:2015' },
+            { label: 'Partner Network', val: '50+ Distributors' },
+            { label: 'Reach', val: 'Pan-India Supply' }
+          ].map((stat, idx) => (
+            <div key={idx} className="bg-gradient-to-b from-white/5 to-[#0d1324] border border-white/10 rounded-2xl p-6 text-center hover:border-blue-500/20 transition-all duration-300">
+              <div className="text-2xl sm:text-3xl font-extrabold text-blue-400">{stat.val}</div>
+              <div className="text-xs text-gray-400 mt-2 uppercase tracking-wider font-semibold">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+
+        {/* Grid: Who We Are & Mission */}
+        <div className="grid md:grid-cols-2 gap-8 mb-16">
+          {/* Who We Are */}
+          <div className="bg-gradient-to-b from-white/5 to-[#0d1324] border border-white/10 rounded-3xl p-8 backdrop-blur-md space-y-5 hover:border-blue-500/20 transition-all duration-300">
+            <h2 className="text-2xl font-bold text-white border-l-4 border-blue-500 pl-4">Who We Are</h2>
+            <p className="text-gray-300 text-sm leading-relaxed">
+              Established in 2023, NitroLube is a forward-thinking lubrication solutions company dedicated to delivering unmatched quality and performance across both automotive and industrial sectors. Built on innovation, engineering expertise, and a deep understanding of India’s evolving market, we are committed to redefining what modern lubrication stands for.
+            </p>
+            <p className="text-gray-300 text-sm leading-relaxed">
+              Whether it’s two-wheelers, commercial fleets, industrial machinery, or specialized applications, our products are designed to enhance performance, extend engine and equipment life, and ensure reliability—every single time.
+            </p>
+          </div>
+
+          {/* Our Mission */}
+          <div className="bg-gradient-to-b from-white/5 to-[#0d1324] border border-white/10 rounded-3xl p-8 backdrop-blur-md space-y-5 hover:border-blue-500/20 transition-all duration-300">
+            <h2 className="text-2xl font-bold text-white border-l-4 border-blue-500 pl-4">Our Mission</h2>
+            <p className="text-gray-300 text-sm leading-relaxed">
               At NitroLube, our mission is to deliver high-performance lubrication solutions that enhance engine efficiency, protect machinery, and empower businesses across India. We are committed to engineering world-class, technology-driven products tailored to the unique demands of Indian roads, industries, and operating conditions.
             </p>
-            <p>
-              Our journey forward is strengthened by the guidance, deep knowledge, and decades of experience of Mr. Sanjay Agarwal (MD). His strategic vision and understanding of the automotive and industrial landscape play a crucial role in shaping our innovations, ensuring that every product we create truly meets the needs of our customers and the market we serve.
-            </p>
-            <p>
-              Driven by innovation, reliability, and a strong focus on customer satisfaction, we strive to build long-term partnerships with workshops, distributors, fleet owners, and industrial clients. Our mission goes beyond supplying lubricants—we aim to support progress, improve performance, and create lasting value for every partner who chooses NitroLube.
-            </p>
-            <p>
-              At NitroLube, <span className="font-bold">WE GROW TOGETHER.</span>
+            <p className="text-gray-300 text-sm leading-relaxed">
+              Our journey forward is strengthened by the guidance, deep knowledge, and decades of experience of <span className="font-bold text-white">Mr. Sanjay Agarwal (MD)</span>. His strategic vision and understanding of the automotive and industrial landscape play a crucial role in shaping our innovations. At NitroLube, <span className="text-blue-400 font-bold">WE GROW TOGETHER</span>.
             </p>
           </div>
-        </section>
+        </div>
 
-        {/* Basic Information Section */}
-        <section className="mb-12">
-          <h2 className="text-4xl font-bold text-white mb-6 text-center">Basic Information</h2>
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 md:p-8 border border-white/20 max-w-3xl mx-auto">
-            <div className="flex flex-col gap-3">
-              <div className="flex flex-col sm:flex-row gap-2">
-                <span className="text-base text-white/70 font-medium sm:min-w-[200px]">Nature of Business</span>
-                <span className="text-base text-white font-medium hidden sm:inline">-</span>
-                <span className="text-base text-white font-medium">Manufacturer</span>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-2">
-                <span className="text-base text-white/70 font-medium sm:min-w-[200px]">Additional Business</span>
-                <span className="text-base text-white font-medium hidden sm:inline">-</span>
-                <span className="text-base text-white font-medium">Retail Business, Supplier of Services</span>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-2">
-                <span className="text-base text-white/70 font-medium sm:min-w-[200px]">Company CEO</span>
-                <span className="text-base text-white font-medium hidden sm:inline">-</span>
-                <span className="text-base text-white font-medium">Abhishek Agrawal</span>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-2">
-                <span className="text-base text-white/70 font-medium sm:min-w-[200px]">Registered Address</span>
-                <span className="text-base text-white font-medium hidden sm:inline">-</span>
-                <span className="text-base text-white font-medium">Shree Tirupati Motors and Tractors, Ranchi Patna Road, Koderma, Jharkhand, 825409</span>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-2">
-                <span className="text-base text-white/70 font-medium sm:min-w-[200px]">Total Number of Employees</span>
-                <span className="text-base text-white font-medium hidden sm:inline">-</span>
-                <span className="text-base text-white font-medium">Upto 10 People</span>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-2">
-                <span className="text-base text-white/70 font-medium sm:min-w-[200px]">GST No.</span>
-                <span className="text-base text-white font-medium hidden sm:inline">-</span>
-                <span className="text-base text-white font-medium">20AFDPA8291D1Z1</span>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-2">
-                <span className="text-base text-white/70 font-medium sm:min-w-[200px]">GST Registration Date</span>
-                <span className="text-base text-white font-medium hidden sm:inline">-</span>
-                <span className="text-base text-white font-medium">30-01-2023</span>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-2">
-                <span className="text-base text-white/70 font-medium sm:min-w-[200px]">Legal Status of Firm</span>
-                <span className="text-base text-white font-medium hidden sm:inline">-</span>
-                <span className="text-base text-white font-medium">Proprietorship</span>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-2">
-                <span className="text-base text-white/70 font-medium sm:min-w-[200px]">GST Partner Name</span>
-                <span className="text-base text-white font-medium hidden sm:inline">-</span>
-                <span className="text-base text-white font-medium">Sanjay Agrawal</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Statutory Profile Section */}
-        <section className="mb-12">
-          <h2 className="text-4xl font-bold text-white mb-6 text-center">Statutory Profile</h2>
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 md:p-8 border border-white/20 max-w-3xl mx-auto">
-            <div className="flex flex-col gap-3">
-              <div className="flex flex-col sm:flex-row gap-2">
-                <span className="text-base text-white/70 font-medium sm:min-w-[200px]">Banking details</span>
-                <span className="text-base text-white font-medium hidden sm:inline">-</span>
-                <span className="text-base text-white font-medium">IDBI Bank</span>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-2">
-                <span className="text-base text-white/70 font-medium sm:min-w-[200px]">Payment Mode</span>
-                <span className="text-base text-white font-medium hidden sm:inline">-</span>
-                <span className="text-base text-white font-medium">Cash, Online, Credit Card, Cheque, DD, Bank Transfer</span>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-2">
-                <span className="text-base text-white/70 font-medium sm:min-w-[200px]">Shipment Mode</span>
-                <span className="text-base text-white font-medium hidden sm:inline">-</span>
-                <span className="text-base text-white font-medium">By Road</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Download Brochure and Test Reports Section */}
-        <section className="mb-12">
-          <div className="max-w-3xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-6">
-              {/* Download Brochure */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
-                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg
-                    className="w-8 h-8 text-white"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"
-                    />
-                  </svg>
+        {/* Corporate Profile Data tables */}
+        <div className="grid lg:grid-cols-12 gap-8 mb-16 items-start">
+          
+          {/* Basic Information */}
+          <div className="lg:col-span-7 bg-gradient-to-b from-white/5 to-[#0d1324] border border-white/10 rounded-3xl p-8 backdrop-blur-md hover:border-blue-500/20 transition-all duration-300">
+            <h2 className="text-xl font-bold text-white mb-6 border-b border-white/10 pb-4 flex items-center gap-3">
+              <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414-5.414A1 1 0 0118.586 7V19a2 2 0 01-2 2z" />
+              </svg>
+              Corporate Specifications
+            </h2>
+            <div className="space-y-4">
+              {basicInfo.map((info, idx) => (
+                <div key={idx} className="grid grid-cols-1 sm:grid-cols-12 gap-2 border-b border-white/5 pb-3 last:border-b-0 last:pb-0 items-start">
+                  <div className="sm:col-span-4 text-gray-400 font-semibold text-xs sm:text-sm">{info.label}</div>
+                  <div className="sm:col-span-8 text-white font-medium text-xs sm:text-sm pl-0 sm:pl-4 border-l-0 sm:border-l border-white/5 break-words">{info.value}</div>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">Download Brochure</h3>
-                <p className="text-sm text-white/80 mb-4">Get our complete product catalog and company information</p>
+              ))}
+            </div>
+          </div>
+
+          {/* Statutory Profile & Downloads */}
+          <div className="lg:col-span-5 space-y-8">
+            {/* Statutory Profile */}
+            <div className="bg-gradient-to-b from-white/5 to-[#0d1324] border border-white/10 rounded-3xl p-8 backdrop-blur-md hover:border-blue-500/20 transition-all duration-300">
+              <h2 className="text-xl font-bold text-white mb-6 border-b border-white/10 pb-4 flex items-center gap-3">
+                <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
+                </svg>
+                Trading Guidelines
+              </h2>
+              <div className="space-y-4">
+                {statutoryProfile.map((info, idx) => (
+                  <div key={idx} className="grid grid-cols-1 sm:grid-cols-12 gap-2 border-b border-white/5 pb-3 last:border-b-0 last:pb-0 items-start">
+                    <div className="sm:col-span-5 text-gray-400 font-semibold text-xs sm:text-sm">{info.label}</div>
+                    <div className="sm:col-span-7 text-white font-medium text-xs sm:text-sm pl-0 sm:pl-4 border-l-0 sm:border-l border-white/5">{info.value}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Downloads Catalog */}
+            <div className="bg-gradient-to-r from-blue-900/10 to-indigo-900/10 border border-blue-500/30 rounded-3xl p-8 backdrop-blur-md text-center space-y-5 hover:border-blue-500/40 transition-all duration-300">
+              <div className="w-12 h-12 rounded-2xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center mx-auto">
+                <svg className="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-bold text-white">Download Corporate Profile</h3>
+              <p className="text-xs text-gray-400 leading-relaxed">
+                Access our offline catalog, product specifications sheets, and wholesale application brochure in one single package.
+              </p>
+              <div className="pt-2">
                 <a
                   href="/brochure.pdf"
                   download
-                  className="inline-block py-2 px-6 bg-white text-[#0055AD] font-semibold rounded-lg transition-all duration-200 hover:bg-white/90"
+                  className="inline-flex py-3 px-8 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl text-xs transition-all shadow-lg hover:shadow-blue-500/20 hover:scale-[1.01]"
                 >
-                  Download PDF
+                  Download Brochure PDF
                 </a>
               </div>
+            </div>
 
-              {/* View Test Reports */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
-                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg
-                    className="w-8 h-8 text-white"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"
-                    />
+          </div>
+        </div>
+
+        {/* Laboratory Certifications Downloads (About page grid) */}
+        <section className="mb-16 bg-gradient-to-b from-white/5 to-[#0d1324] border border-white/10 rounded-3xl p-8 backdrop-blur-md hover:border-blue-500/20 transition-all duration-300">
+          <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-3 border-b border-white/10 pb-4">
+            <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            Official Quality Certificates
+          </h2>
+          <p className="text-sm text-gray-400 mb-8 leading-relaxed">
+            We value full transparency. Below you can check and download the official independent laboratory reports confirming viscosity index parameters, flash & fire points, and wear metrics.
+          </p>
+
+          <div className="grid sm:grid-cols-2 gap-4">
+            {[1, 2, 3, 4, 5, 6].map((num) => (
+              <a
+                key={num}
+                href={`/labtest${num}.pdf`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 p-4 bg-[#0a0f1d] border border-white/5 hover:border-blue-500/30 rounded-2xl hover:bg-white/5 transition-all duration-300 group shadow-md"
+              >
+                <div className="w-10 h-10 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center group-hover:bg-red-500/20 transition-colors">
+                  <svg className="w-5 h-5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">View Test Reports</h3>
-                <p className="text-sm text-white/80 mb-4">Access our laboratory test reports and certifications</p>
-                <div className="flex flex-wrap justify-center gap-2">
-                  {[1, 2, 3, 4, 5, 6].map((num) => (
-                    <a
-                      key={num}
-                      href={`/labtest${num}.pdf`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-block py-2 px-4 bg-white/20 text-white font-medium rounded-lg transition-all duration-200 hover:bg-white/30 text-sm"
-                    >
-                      Report {num}
-                    </a>
-                  ))}
+                <div className="text-left">
+                  <div className="font-bold text-sm text-white group-hover:text-blue-400 transition-colors">
+                    {reportNames[num - 1]}
+                  </div>
+                  <div className="text-[10px] text-gray-500 uppercase tracking-wider font-semibold mt-1">PDF Certificate</div>
                 </div>
-              </div>
-            </div>
+              </a>
+            ))}
           </div>
         </section>
 
-        {/* Our Values Section */}
-        <section>
-          <h2 className="text-4xl font-bold text-white mb-8 text-center">
-            Our Values
-          </h2>
-          <div className="flex flex-nowrap md:flex-wrap justify-center gap-3 md:gap-6 overflow-x-auto scrollbar-hide pb-2 md:pb-0">
-            {/* Quality */}
-            <div className="flex items-center gap-2 md:gap-3 bg-white/20 backdrop-blur-sm rounded-full px-4 md:px-6 py-2 md:py-3 flex-shrink-0">
-              <div className="w-8 h-8 md:w-10 md:h-10 bg-white/20 rounded-full flex items-center justify-center">
-                <svg
-                  className="w-4 h-4 md:w-6 md:h-6 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M4.5 12.75l6 6 9-13.5"
-                  />
-                </svg>
+        {/* Corporate Values */}
+        <div className="text-center space-y-10">
+          <h2 className="text-3xl font-extrabold text-white">Our Values</h2>
+          
+          <div className="grid sm:grid-cols-3 gap-6">
+            {values.map((v, idx) => (
+              <div
+                key={idx}
+                className="bg-gradient-to-b from-white/5 to-[#0d1324] border border-white/10 rounded-3xl p-8 flex flex-col items-center gap-4 hover:border-blue-500/30 transition-all duration-300 hover:-translate-y-1 text-center"
+              >
+                <div className="w-14 h-14 rounded-2xl bg-blue-500/10 border border-blue-500/25 flex items-center justify-center text-blue-400">
+                  {v.icon}
+                </div>
+                <h3 className="text-xl font-bold text-white">{v.title}</h3>
+                <p className="text-xs text-gray-400 leading-relaxed">{v.description}</p>
               </div>
-              <span className="text-sm md:text-lg font-semibold text-white whitespace-nowrap">
-                Quality
-              </span>
-            </div>
-
-            {/* Trust */}
-            <div className="flex items-center gap-2 md:gap-3 bg-white/20 backdrop-blur-sm rounded-full px-4 md:px-6 py-2 md:py-3 flex-shrink-0">
-              <div className="w-8 h-8 md:w-10 md:h-10 bg-white/20 rounded-full flex items-center justify-center">
-                <svg
-                  className="w-4 h-4 md:w-5 md:h-5 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
-              </div>
-              <span className="text-sm md:text-lg font-semibold text-white whitespace-nowrap">
-                Trust
-              </span>
-            </div>
-
-            {/* Customer Satisfaction */}
-            <div className="flex items-center gap-2 md:gap-3 bg-white/20 backdrop-blur-sm rounded-full px-4 md:px-6 py-2 md:py-3 flex-shrink-0">
-              <div className="w-8 h-8 md:w-10 md:h-10 bg-white/20 rounded-full flex items-center justify-center">
-                <svg
-                  className="w-4 h-4 md:w-5 md:h-5 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M15.182 15.182a4.5 4.5 0 01-6.364 0M21 12a9 9 0 11-18 0 9 9 0 0118 0zM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75zm-.375 0h.008v.015h-.008V9.75zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75zm-.375 0h.008v.015h-.008V9.75z"
-                  />
-                </svg>
-              </div>
-              <span className="text-sm md:text-lg font-semibold text-white whitespace-nowrap">
-                Customer Satisfaction
-              </span>
-            </div>
+            ))}
           </div>
-        </section>
+        </div>
+
       </div>
     </div>
-  );
+  )
 }

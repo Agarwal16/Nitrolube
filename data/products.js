@@ -14,7 +14,7 @@ export const products = {
     {
       name: "Engine Oil",
       grade: "15W40",
-      baseImage: "/engineOil1.jpg",
+      baseImage: "/engineOil2.png",
       sizes: [
         { size: "500 ml", mrp: 225 },
         { size: "1 Litre", mrp: 480 },
@@ -33,7 +33,7 @@ export const products = {
     {
       name: "Engine Oil",
       grade: "15W50",
-      baseImage: "/engineOil1.jpg",
+      baseImage: "/engineOil3.png",
       sizes: [
         { size: "1 Litre", mrp: 510.0 },
         { size: "2.5 Litre", mrp: 1275.0 },
@@ -43,7 +43,7 @@ export const products = {
     {
       name: "Engine Oil",
       grade: "20W40",
-      baseImage: "/engineOil1.jpg",
+      baseImage: "/engineOil4.png",
       sizes: [
         { size: "500 ml", mrp: 225.0 },
         { size: "800 ml", mrp: 360.0 },
@@ -63,7 +63,7 @@ export const products = {
     {
       name: "Engine Oil",
       grade: "20W50",
-      baseImage: "/engineOil1.jpg",
+      baseImage: "/engineOil5.png",
       sizes: [
         { size: "1 Litre", mrp: 480.0 },
         { size: "3 Litre", mrp: 1440.0 },
@@ -73,7 +73,7 @@ export const products = {
     {
       name: "Engine Oil",
       grade: "5W30",
-      baseImage: "/engineOil1.jpg",
+      baseImage: "/engineOil6.png",
       sizes: [
         { size: "1 Litre", mrp: 420.0 },
         { size: "3 Litre", mrp: 1290.0 },
@@ -84,7 +84,7 @@ export const products = {
     {
       name: "Engine Oil",
       grade: "5W40",
-      baseImage: "/engineOil1.jpg",
+      baseImage: "/engineOil6.png",
       sizes: [
         { size: "3 Litre", mrp: 1350.0 },
         { size: "3.5 Litre", mrp: 1575.0 },
@@ -97,7 +97,7 @@ export const products = {
     {
       name: "Gear Oil",
       grade: "EP 90",
-      baseImage: "/Gearoil.png",
+      baseImage: "/gearOil1.png",
       sizes: [
         { size: "500 ml", mrp: 210 },
         { size: "1 Litre", mrp: 405 },
@@ -116,7 +116,7 @@ export const products = {
     {
       name: "Gear Oil",
       grade: "80W90",
-      baseImage: "/Gearoil.png",
+      baseImage: "/gearOil2.png",
       sizes: [
         { size: "500 ml", mrp: 210 },
         { size: "1 Litre", mrp: 405 },
@@ -167,7 +167,7 @@ export const products = {
     {
       name: "Hydraulic Oil",
       grade: "46",
-      baseImage: "/hydraulicOil1.png",
+      baseImage: "/hydraulicOil2.png",
       sizes: [
         { size: "1 Litre", mrp: 330.0 },
         { size: "3 Litre", mrp: 975.0 },
@@ -223,7 +223,7 @@ export const products = {
     },
     {
       name: "Grease Red Gel Lithium",
-      baseImage: "/grease1.png",
+      baseImage: "/grease2.png",
       sizes: [
         { size: "500 GM", mrp: 488.00 },
         { size: "1 KG", mrp: 968.00 },
@@ -237,7 +237,7 @@ export const products = {
     },
     {
       name: "Grease GGR",
-      baseImage: "/grease1.png",
+      baseImage: "/grease3.png",
       sizes: [
         { size: "500 GM", mrp: 272.00 },
       ],
@@ -245,7 +245,7 @@ export const products = {
     },
     {
       name: "Grease Red Gel Ap-3",
-      baseImage: "/grease1.png",
+      baseImage: "/grease4.png",
       sizes: [
         { size: "1 KG", mrp: 540.00 },
         { size: "2 KG", mrp: 1092.00 },
@@ -258,7 +258,7 @@ export const products = {
     },
     {
       name: "Grease APLR",
-      baseImage: "/grease1.png",
+      baseImage: "/grease5.png",
       sizes: [
         { size: "500 GM", mrp: 440 },
       ],
@@ -266,7 +266,7 @@ export const products = {
     },
     {
       name: "Lithium Gel",
-      baseImage: "/grease1.png",
+      baseImage: "/grease6.png",
       sizes: [
         { size: "1 KG", mrp: 868 },
         { size: "2 KG", mrp: 1720.00 },
@@ -279,7 +279,7 @@ export const products = {
     },
     {
       name: "Graese Gg",
-      baseImage: "/grease1.png",
+      baseImage: "/grease7.png",
       sizes: [
         { size: "100 GM", mrp: 2532 },
       ],
@@ -287,7 +287,7 @@ export const products = {
     },
     {
       name: "Grease Golden Gel Ap-3",
-      baseImage: "/grease1.png",
+      baseImage: "/grease8.png",
       sizes: [
         { size: "500 GM", mrp: 272.00 },
         { size: "1 KG", mrp: 540.00 },
@@ -304,7 +304,7 @@ export const products = {
   brakeOil: [
     {
       name: "Brake Oil DOT-3",
-      baseImage: "/singleProduct1.webp",
+      baseImage: "/brakeoil1.png",
       sizes: [
         { size: "250 GM", mrp: 200.00 },
       ],
@@ -312,7 +312,7 @@ export const products = {
     },
     {
       name: "Brake Oil DOT-4",
-      baseImage: "/singleProduct1.webp",
+      baseImage: "/brakeoil2.png",
       sizes: [
         { size: "250 GM", mrp: 200.00 },
       ],
@@ -323,7 +323,7 @@ export const products = {
   steeringOil: [
     {
       name: "Steering Oil",
-      baseImage: "/singleProduct1.webp",
+      baseImage: "/steeringoil.png",
       sizes: [
         { size: "500 ML", mrp: 375.00 },
       ],
@@ -334,7 +334,7 @@ export const products = {
   shockerOil: [
     {
       name: "Shocker Oil",
-      baseImage: "/singleProduct1.webp",
+      baseImage: "/shockeroil.png",
       sizes: [
         { size: "175 GM", mrp: 125.00 },
       ],
@@ -345,7 +345,8 @@ export const products = {
   coolant: [
     {
       name: "Coolant",
-      baseImage: "/singleProduct1.webp",
+      grade: "1:4",
+      baseImage: "/coolant1.png",
       sizes: [
         { size: "1 Litre", mrp: 250.00 },
       ],
@@ -354,7 +355,8 @@ export const products = {
     },
     {
       name: "Coolant",
-      baseImage: "/singleProduct1.webp",
+      grade: "1:7",
+      baseImage: "/coolant2.png",
       sizes: [
         { size: "1 Litre", mrp: 320.00 },
       ],
@@ -366,7 +368,7 @@ export const products = {
   uttoOil: [
     {
       name: "UTTO Oil",
-      baseImage: "/singleProduct1.webp",
+      baseImage: "/uttooil.png",
       sizes: [
         { size: "5 Litre", mrp: 3625.00 },
       ],
